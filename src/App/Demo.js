@@ -26,7 +26,7 @@ export class Demo extends React.Component {
     constructor() {
         super();
 
-        this.gun = new Gun('http://192.168.0.11:8765/gun');
+        this.gun = new Gun('http://192.168.1.212:8765/');
         this.user = this.gun.user();
 
         window.gun = this.gun;
@@ -41,9 +41,9 @@ export class Demo extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.doSignin()
-    }
+    //componentDidMount() {
+    //    this.doSignin()
+    //}
 
     hookUserList = () => {
         this.user.get('list').open((list) => {
